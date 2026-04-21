@@ -1,6 +1,12 @@
 resource "aws_s3_bucket" "main" {
   bucket = "xashy_team_gracebucket"
+
+  tags= {
+    Name    = "My bucket"
+    Environment = "Dev"
+  }
 }
+
 
 resource "aws_s3_bucket_versioning" "main"{
 bucket = aws_s3_bucket.main.id
@@ -16,4 +22,6 @@ resource "aws_s3_bucket_public_access_block" "main" {
     block_public_policy = true
     ignore_public_acls = true
     restrict_public_buckets = true
+
+
 }
