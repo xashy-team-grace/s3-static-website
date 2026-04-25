@@ -1,9 +1,10 @@
 resource "aws_s3_bucket" "main" {
-  bucket = "xashy_team_gracebucket"
+  bucket = var.bucket_name
 
   tags= {
-    Name    = "My bucket"
-    Environment = "Dev"
+    Name = var.bucket_name
+    Environment = var.enviroment
+    Owner = var.owner
   }
 }
 
