@@ -2,8 +2,8 @@ resource "aws_s3_bucket" "main" {
   bucket = "xashy_team_gracebucket"
 
   tags= {
-    Name    = "My bucket"
-    Environment = "Dev"
+    Name    = "xashy-team-grace-bucket"
+    Environment = var.environment
   }
 }
 
