@@ -22,6 +22,5 @@ variable "enviroment" {
 variable "owner" {
     description = "Owner of the resources"
     type = string
-    default = "Bradley" 
   
 }
